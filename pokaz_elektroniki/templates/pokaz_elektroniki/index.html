@@ -15,7 +15,7 @@
                 <p>(brak zdjęcia)</p>
             {% endif %}
             <br>
-            <a href="{% url 'strona_części_elektronicznej' elektronika.część.id %}">link do {{ część.nazwa }}</a>
+            <a href="{% url 'pokaz_elektroniki:strona_części_elektronicznej' część.id %}">link do {{ część.nazwa }}</a>
         {% endfor %}
     </body>
 </html>
