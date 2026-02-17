@@ -1,4 +1,6 @@
 from django.urls import path
+
+app_name = 'pokaz_elektroniki'
 from . import views
 
 urlpatterns = [
