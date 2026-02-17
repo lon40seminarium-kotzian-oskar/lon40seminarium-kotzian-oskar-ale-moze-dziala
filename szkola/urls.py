@@ -1,5 +1,5 @@
 """
-URL configuration for elektronika project.
+URL configuration for szkola project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('pokaz_elektroniki.urls')),
+    path('', include('home.urls')),
+    path('elektronika/',include('pokaz_elektroniki.urls')),
 ]
 
 if settings.DEBUG:
