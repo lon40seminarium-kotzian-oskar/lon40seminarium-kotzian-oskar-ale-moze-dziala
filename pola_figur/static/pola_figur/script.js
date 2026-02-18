@@ -39,3 +39,26 @@ function triangleDiameter(){
     document.getElementById("trDResult").innerHTML = 
     `obwód: ${perimeter}`;
 }
+
+function trapeziumArea(){
+    let h = Number(document.getElementById('trpH').value);
+    let a = Number(document.getElementById('trpA').value);
+    let b = Number(document.getElementById('trpB').value);
+
+    let area = ((a + b) * h) / 2;
+
+    document.getElementById("trAResult").innerHTML =
+    `Pole: ${area}`;
+}
+
+function triangleDiameter(){
+    let a = Number(document.getElementById('trpDA').value);
+    let b = Number(document.getElementById('trpB').value);
+    let c = Number(document.getElementById('trpC').value);
+    let d = Number(document.getElementById('trpD').value);
+
+    let perimeter = a+b+c+d;
+
+    document.getElementById("trDResult").innerHTML = 
+    `obwód: ${perimeter}`;
+}
