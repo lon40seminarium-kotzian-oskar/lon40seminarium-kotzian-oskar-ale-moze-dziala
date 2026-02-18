@@ -1,9 +1,9 @@
 div.gallery {
-  border: 1px solid #ccc;
+  /* Removed border: 1px solid #ccc; */
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  /* Removed border: 1px solid #777; */
 }
 
 div.gallery img {
@@ -29,19 +29,20 @@ div.desc {
 
 .responsive {
   padding: 0 6px;
+  float: left; /* Reintroduced float: left */
   width: 24.99999%;
 }
 
 @media only screen and (max-width: 700px) {
   .responsive {
-    width: 49.99999%;
+    width: 49.99999%; /* Two images per line */
     margin: 6px 0;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .responsive {
-    width: 100%;
+    width: 100%; /* One image per line */
   }
 }
 
