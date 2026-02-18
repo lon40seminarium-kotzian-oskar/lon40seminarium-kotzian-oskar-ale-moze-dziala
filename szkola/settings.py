@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pokaz_elektroniki',
     'home',
+    'pola_figur',
 ]
 
 MIDDLEWARE = [

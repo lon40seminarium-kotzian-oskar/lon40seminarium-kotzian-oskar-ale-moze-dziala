@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('elektronika/', include('pokaz_elektroniki.urls', namespace='pokaz_elektroniki')),
+    path('pola_figur/', include('pola_figur.urls', namespace='pola_figur')),
 ]
 
 if settings.DEBUG:
