@@ -13,6 +13,7 @@
                 <td>
                     <h2>Pole i obwód prostokąta</h2>
                     <input type="number" id="rectA" placeholder="Bok a">
+                    <br>
                     <input type="number" id="rectB" placeholder="Bok b">
                     <br><button onclick="rectangle()">Oblicz</button>
                     <div id="rectResult" ></div>
@@ -22,6 +23,28 @@
                     <input type="number" id="cirR" placeholder="Promień r">
                     <br><button onclick="circle()">Oblicz</button>
                     <div id="cirResult" ></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Pole trójkąta</h2>
+                    <input type="number" id="trA" placeholder="Podstawa a">
+                    <br>
+                    <input type="number" id="trH" placeholder="Wysokość h">
+                    <br>
+                    <button onclick="triangleArea()">Oblicz</button>
+                    <div id="trAResult"></div>
+                </td>
+                <td>
+                    <h2>Pole trójkąta</h2>
+                    <input type="number" id="trDA" placeholder="bok a">
+                    <br>
+                    <input type="number" id="trB" placeholder="bok b">
+                    <br>
+                    <input type="number" id="trC" placeholder="bok c">
+                    <br>
+                    <button onclick="triangleDiameter()">Oblicz</button>
+                    <div id="trDResult"></div>
                 </td>
             </tr>
         </table>
