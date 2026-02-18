@@ -8,19 +8,20 @@
 {% block content %} 
     <link rel="stylesheet" href="{% static 'pokaz_elektroniki/style.css' %}">
     <h1>Elementy elektroniczne</h1>
-    {% for część in części_elektroniczne %}
-        <div class="responsive">
-            <div class="gallery">
-                
-                    {% if część.zdjęcie %}
-                        <a href="{% url 'pokaz_elektroniki:strona_części_elektronicznej' część.id %}">
-                            <img src="{{ część.zdjęcie.url }}" alt="{{ część.nazwa }}" class="image gallery-img">
-                        </a>
-                    {% else %}
-                        <p>(brak zdjęcia)</p>
-                    {% endif %}
-                    <div class="desc">{{ forloop.counter }}. {{ część.nazwa }}</div>
+    <div class="image-gallery-container">
+        {% for część in części_elektroniczne %}
+            <div class="responsive">
+                <div class="gallery">
+                        {% if część.zdjęcie %}
+                            <a href="{% url 'pokaz_elektroniki:strona_części_elektronicznej' część.id %}">
+                                <img src="{{ część.zdjęcie.url }}" alt="{{ część.nazwa }}" class="image gallery-img">
+                            </a>
+                        {% else %}
+                            <p>(brak zdjęcia)</p>
+                        {% endif %}
+                        <h2 class="desc">{{ forloop.counter }}. {{ część.nazwa }}</h2>
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock content %}

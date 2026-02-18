@@ -1,9 +1,16 @@
+.image-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items when they don't fill the row */
+    gap: 10px; /* Space between items */
+}
+
 div.gallery {
-  /* Removed border: 1px solid #ccc; */
+  /* No border */
 }
 
 div.gallery:hover {
-  /* Removed border: 1px solid #777; */
+  /* No border */
 }
 
 div.gallery img {
@@ -28,26 +35,24 @@ div.desc {
 }
 
 .responsive {
-  padding: 0 6px;
-  float: left; /* Reintroduced float: left */
-  width: 24.99999%;
+  /* Removed padding for flexbox gap */
+  /* Removed float: left */
+  /* Set a base width for flex items and allow them to grow/shrink */
+  flex: 1 1 200px; /* This means flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+  max-width: calc(33.333% - 10px); /* Three items per row by default, considering gap */
+  padding: 0; /* Remove old padding */
 }
 
 @media only screen and (max-width: 700px) {
   .responsive {
-    width: 49.99999%; /* Two images per line */
-    margin: 6px 0;
+    max-width: calc(50% - 10px); /* Two items per row on medium screens */
   }
 }
 
 @media only screen and (max-width: 500px) {
   .responsive {
-    width: 100%; /* One image per line */
+    max-width: calc(100% - 10px); /* One item per row on small screens */
   }
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* Removed .clearfix:after */
