@@ -51,7 +51,7 @@ function trapeziumArea(){
     `Pole: ${area}`;
 }
 
-function triangleDiameter(){
+function trapeziumDiameter(){
     let a = Number(document.getElementById('trpDA').value);
     let b = Number(document.getElementById('trpB').value);
     let c = Number(document.getElementById('trpC').value);
