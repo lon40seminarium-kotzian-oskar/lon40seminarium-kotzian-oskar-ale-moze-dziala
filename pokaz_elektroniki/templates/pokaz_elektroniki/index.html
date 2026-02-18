@@ -14,7 +14,7 @@
                 
                     {% if część.zdjęcie %}
                         <a href="{% url 'pokaz_elektroniki:strona_części_elektronicznej' część.id %}">
-                            <img src="{{ część.zdjęcie.url }}" alt="{{ część.nazwa }}" class="image">
+                            <img src="{{ część.zdjęcie.url }}" alt="{{ część.nazwa }}" class="image gallery-img">
                         </a>
                     {% else %}
                         <p>(brak zdjęcia)</p>
