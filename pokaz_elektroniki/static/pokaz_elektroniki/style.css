@@ -14,13 +14,12 @@ div.gallery:hover {
 }
 
 div.gallery img {
-  width: 100%;
-  height: auto;
+  /* This style is now managed by .gallery-img */
 }
 
 .gallery-img {
-    max-width: 700px;
-    width: 100%;
+    max-width: 700px; /* Max width for the image itself */
+    width: 100%; /* Image takes full width of its container */
     height: 200px;
     object-fit: cover;
 }
@@ -35,24 +34,28 @@ div.desc {
 }
 
 .responsive {
-  /* Removed padding for flexbox gap */
-  /* Removed float: left */
-  /* Set a base width for flex items and allow them to grow/shrink */
-  flex: 1 1 200px; /* This means flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
-  max-width: calc(33.333% - 10px); /* Three items per row by default, considering gap */
+  flex: 0 1 700px; /* flex-grow: 0, flex-shrink: 1, flex-basis: 700px */
+  max-width: 700px; /* Ensure responsive item itself doesn't exceed 700px */
   padding: 0; /* Remove old padding */
 }
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    max-width: calc(50% - 10px); /* Two items per row on medium screens */
-  }
+@media (min-width: 1420px) { /* Adjust breakpoint for 2 items @ 700px each + gap */
+    .responsive {
+        flex-basis: calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
 }
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    max-width: calc(100% - 10px); /* One item per row on small screens */
-  }
+@media (min-width: 2130px) { /* Adjust breakpoint for 3 items @ 700px each + gap */
+    .responsive {
+        flex-basis: calc(33.333% - 10px);
+        max-width: calc(33.333% - 10px);
+    }
 }
 
-/* Removed .clearfix:after */
+@media (max-width: 710px) { /* For screens smaller than ~710px (1 item) */
+  .responsive {
+    flex-basis: calc(100% - 10px); /* One item per row */
+    max-width: calc(100% - 10px);
+  }
+}
