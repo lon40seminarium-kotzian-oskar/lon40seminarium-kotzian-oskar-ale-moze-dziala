@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function rectangle(){
-                let a = document.getElementById('rectA').value;
-                let b = document.getElementById('rectB').value;
+                let a = Number(document.getElementById('rectA').value);
+                let b = Number(document.getElementById('rectB').value);
 
                 let area = a * b;
-                let perimeter = (2 * (a + b));
+                let perimeter = 2 * (a + b);
 
                 document.getElementById("rectResult").innerHTML =
                     `Pole: ${area}<br>Obwód: ${perimeter}`;
