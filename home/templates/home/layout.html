@@ -11,9 +11,9 @@
     </head>
     <body>
         <div class="topnav" id="myTopnav">
-            <a href="{% url 'home:index' %}" class="active">Home</a>
-            <a href="{% url 'pokaz_elektroniki:index' %}">Elektronika</a>
-            <a href="{% url 'pola_figur:index' %}">Pola figur</a>
+            <a href="{% url 'home:index' %}" {% if active == 'home' %}class="active"{% endif %}>Home</a>
+            <a href="{% url 'pokaz_elektroniki:index' %}" {% if active == 'pokaz_elektroniki' %}class="active"{% endif %}>Elektronika</a>
+            <a href="{% url 'pola_figur:index' %}" {% if active == 'pola_figur' %}class="active"{% endif %}>Pola figur</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>

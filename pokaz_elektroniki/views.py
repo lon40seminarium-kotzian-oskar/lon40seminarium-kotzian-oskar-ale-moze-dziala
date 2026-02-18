@@ -5,10 +5,10 @@ def index(request):
 
     części_elektroniczne =  Część_elektroniczna.objects.all()
 
-    return render(request, 'pokaz_elektroniki/index.html', {'części_elektroniczne': części_elektroniczne})
+    return render(request, 'pokaz_elektroniki/index.html', {'części_elektroniczne': części_elektroniczne, 'active' : 'pokaz_elektroniki'})
 
 def strona_części_elektronicznej(request, id):
 
     część = get_object_or_404(Część_elektroniczna, id=id)
 
-    return render(request, 'pokaz_elektroniki/strona_części_elektronicznej.html', {'część' : część})
+    return render(request, 'pokaz_elektroniki/strona_części_elektronicznej.html', {'część' : część, 'active' : 'pokaz_elektroniki'})
