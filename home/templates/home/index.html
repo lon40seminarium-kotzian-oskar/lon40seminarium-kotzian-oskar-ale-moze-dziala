@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <title>Home</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <p><a href="{% url 'pokaz_elektroniki:index' %}">Elektronika</a></p>
-        <p><a href="{% url 'pola_figur:index' %}">Pola figur</a></p>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %} 
+    <p><a href="{% url 'pokaz_elektroniki:index' %}">Elektronika</a></p>
+    <p><a href="{% url 'pola_figur:index' %}">Pola figur</a></p>
+{% endblock content %}
