@@ -4,8 +4,30 @@
         <title>Pola figur</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function rectangle(){
+                let a = document.getElementById('rectA').value;
+                let b = document.getElementById('rectB').value;
+
+                let area = a * b;
+                let perimeter = (2 * (a + b));
+
+                document.getElementById("rectResult").innerHTML =
+                    "Pole: " + area + "<br>Obwód: " + perimeter;
+            }
+        </script>
     </head>
     <body>
-        Bababui
+        <table>
+            <tr>
+                <td>
+                    <h2>Pole i obwód prostokąta</h2>
+                    <input type="number" id="rectA" placeholder="Bok a">
+                    <input type="number" id="rectB" placeholder="Bok b">
+                    <br><button onclick="rectangle()">Oblicz</button>
+                    <div id="rectResult" ></div>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
