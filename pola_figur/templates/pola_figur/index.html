@@ -15,6 +15,15 @@
                 document.getElementById("rectResult").innerHTML =
                     `Pole: ${area}<br>Obwód: ${perimeter}`;
             }
+            function circle(){
+                let r = Number(document.getElementById('cirR').value);
+
+                let area = Math.PI * r * r;
+                let perimeter = 2 * Math.pi * r;
+
+                document.getElementById("cirResult").innerHTML =
+                    `Pole: ${area.toFixed(3)}<br>Obwód: ${perimeter.toFixed(3)}`;
+            }
         </script>
     </head>
     <body>
@@ -26,6 +35,12 @@
                     <input type="number" id="rectB" placeholder="Bok b">
                     <br><button onclick="rectangle()">Oblicz</button>
                     <div id="rectResult" ></div>
+                </td>
+                <td>
+                    <h2>Pole i obwód okręgu</h2>
+                    <input type="number" id="cirR" placeholder="Promień r">
+                    <br><button onclick="circle()">Oblicz</button>
+                    <div id="cirResult" ></div>
                 </td>
             </tr>
         </table>
