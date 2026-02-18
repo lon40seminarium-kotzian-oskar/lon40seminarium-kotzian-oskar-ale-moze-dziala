@@ -18,9 +18,9 @@ div.gallery img {
 }
 
 .gallery-img {
-    max-width: 700px; /* Max width for the image itself */
+    max-width: 200px; /* Max width for the image itself */
     width: 100%; /* Image takes full width of its container */
-    height: 700px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -34,28 +34,23 @@ div.desc {
 }
 
 .responsive {
-  flex: 0 1 700px; /* flex-grow: 0, flex-shrink: 1, flex-basis: 700px */
-  max-width: 700px; /* Ensure responsive item itself doesn't exceed 700px */
+  flex: 0 1 200px; /* flex-grow: 0, flex-shrink: 1, flex-basis: 200px */
+  max-width: 200px; /* Ensure responsive item itself doesn't exceed 200px */
   padding: 0; /* Remove old padding */
 }
 
-@media (min-width: 1420px) { /* Adjust breakpoint for 2 items @ 700px each + gap */
+@media (max-width: 410px) { /* Adjust breakpoint for 1 item @ 200px each + gap (approx 200 + 10 gap) */
+  .responsive {
+    flex-basis: calc(100% - 10px); /* One item per row */
+    max-width: calc(100% - 10px);
+  }
+}
+
+@media (min-width: 420px) and (max-width: 630px) { /* For 2 items per row */
     .responsive {
         flex-basis: calc(50% - 10px);
         max-width: calc(50% - 10px);
     }
 }
 
-@media (min-width: 2130px) { /* Adjust breakpoint for 3 items @ 700px each + gap */
-    .responsive {
-        flex-basis: calc(33.333% - 10px);
-        max-width: calc(33.333% - 10px);
-    }
-}
-
-@media (max-width: 710px) { /* For screens smaller than ~710px (1 item) */
-  .responsive {
-    flex-basis: calc(100% - 10px); /* One item per row */
-    max-width: calc(100% - 10px);
-  }
-}
+/* For screens larger than 630px, flex: 0 1 200px and max-width: 200px will allow as many as fit */
