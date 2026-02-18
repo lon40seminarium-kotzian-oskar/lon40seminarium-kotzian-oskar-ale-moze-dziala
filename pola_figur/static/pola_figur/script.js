@@ -47,7 +47,7 @@ function trapeziumArea(){
 
     let area = ((a + b) * h) / 2;
 
-    document.getElementById("trAResult").innerHTML =
+    document.getElementById("trpAResult").innerHTML =
     `Pole: ${area}`;
 }
 
@@ -59,6 +59,6 @@ function triangleDiameter(){
 
     let perimeter = a+b+c+d;
 
-    document.getElementById("trDResult").innerHTML = 
+    document.getElementById("trpDResult").innerHTML = 
     `obwód: ${perimeter}`;
 }
