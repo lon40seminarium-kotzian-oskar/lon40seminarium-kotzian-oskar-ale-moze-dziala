@@ -1,78 +1,76 @@
+{% extends "home/layout.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lg="pl">
-    <head>
-        <title>Pola figur</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="{% static 'pola_figur/script.js' %}" ></script>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <td>
-                    <h2>Pole i obwód prostokąta</h2>
-                    <input type="number" id="rectA" placeholder="Bok a">
-                    <br>
-                    <input type="number" id="rectB" placeholder="Bok b">
-                    <br><button onclick="rectangle()">Oblicz</button>
-                    <div id="rectResult" ></div>
-                </td>
-                <td>
-                    <h2>Pole i obwód okręgu</h2>
-                    <input type="number" id="cirR" placeholder="Promień r">
-                    <br><button onclick="circle()">Oblicz</button>
-                    <div id="cirResult" ></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2>Pole trójkąta</h2>
-                    <input type="number" id="trA" placeholder="Podstawa a">
-                    <br>
-                    <input type="number" id="trH" placeholder="Wysokość h">
-                    <br>
-                    <button onclick="triangleArea()">Oblicz</button>
-                    <div id="trAResult"></div>
-                </td>
-                <td>
-                    <h2>Pole trójkąta</h2>
-                    <input type="number" id="trDA" placeholder="bok a">
-                    <br>
-                    <input type="number" id="trB" placeholder="bok b">
-                    <br>
-                    <input type="number" id="trC" placeholder="bok c">
-                    <br>
-                    <button onclick="triangleDiameter()">Oblicz</button>
-                    <div id="trDResult"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2>Pole trapezu</h2>
-                    <input type="number" id="trpA" placeholder="Podstawa a">
-                    <br>
-                    <input type="number" id="trpB" placeholder="Podstawa b">
-                    <br>
-                    <input type="number" id="trpH" placeholder="Wysokość h">
-                    <br>
-                    <button onclick="trapeziumArea()">Oblicz</button>
-                    <div id="trpAResult"></div>
-                </td>
-                <td>
-                    <h2>Pole trójkąta</h2>
-                    <input type="number" id="trpDA" placeholder="bok a">
-                    <br>
-                    <input type="number" id="trpB" placeholder="bok b">
-                    <br>
-                    <input type="number" id="trpC" placeholder="bok c">
-                    <br>
-                    <input type="number" id="trpD" placeholder="bok d">
-                    <br>
-                    <button onclick="trapeziumDiameter()">Oblicz</button>
-                    <div id="trpDResult"></div>
-                </td>
-            </tr>
-        </table>
-    </body>
-</html>
+
+{% block title %}
+    Pole figur
+{% endblock %}
+
+{% block content %} 
+    <script src="{% static 'pola_figur/script.js' %}" ></script>
+    <table>
+        <tr>
+            <td>
+                <h2>Pole i obwód prostokąta</h2>
+                <input type="number" id="rectA" placeholder="Bok a">
+                <br>
+                <input type="number" id="rectB" placeholder="Bok b">
+                <br><button onclick="rectangle()">Oblicz</button>
+                <div id="rectResult" ></div>
+            </td>
+            <td>
+                <h2>Pole i obwód okręgu</h2>
+                <input type="number" id="cirR" placeholder="Promień r">
+                <br><button onclick="circle()">Oblicz</button>
+                <div id="cirResult" ></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Pole trójkąta</h2>
+                <input type="number" id="trA" placeholder="Podstawa a">
+                <br>
+                <input type="number" id="trH" placeholder="Wysokość h">
+                <br>
+                <button onclick="triangleArea()">Oblicz</button>
+                <div id="trAResult"></div>
+            </td>
+            <td>
+                <h2>Pole trójkąta</h2>
+                <input type="number" id="trDA" placeholder="bok a">
+                <br>
+                <input type="number" id="trB" placeholder="bok b">
+                <br>
+                <input type="number" id="trC" placeholder="bok c">
+                <br>
+                <button onclick="triangleDiameter()">Oblicz</button>
+                <div id="trDResult"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Pole trapezu</h2>
+                <input type="number" id="trpA" placeholder="Podstawa a">
+                <br>
+                <input type="number" id="trpB" placeholder="Podstawa b">
+                <br>
+                <input type="number" id="trpH" placeholder="Wysokość h">
+                <br>
+                <button onclick="trapeziumArea()">Oblicz</button>
+                <div id="trpAResult"></div>
+            </td>
+            <td>
+                <h2>Pole trójkąta</h2>
+                <input type="number" id="trpDA" placeholder="bok a">
+                <br>
+                <input type="number" id="trpB" placeholder="bok b">
+                <br>
+                <input type="number" id="trpC" placeholder="bok c">
+                <br>
+                <input type="number" id="trpD" placeholder="bok d">
+                <br>
+                <button onclick="trapeziumDiameter()">Oblicz</button>
+                <div id="trpDResult"></div>
+            </td>
+        </tr>
+    </table>
+{% endblock content %}

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <title>elektronika</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Pole figur
+{% endblock %}
+
+{% block content %} 
         <h1>Elementy elektroniczne</h1>
         {% for część in części_elektroniczne %}
             <h3>{{ forloop.counter }}. {{ część.nazwa }}</h3>
@@ -19,3 +19,4 @@
         {% endfor %}
     </body>
 </html>
+{% endblock content %}

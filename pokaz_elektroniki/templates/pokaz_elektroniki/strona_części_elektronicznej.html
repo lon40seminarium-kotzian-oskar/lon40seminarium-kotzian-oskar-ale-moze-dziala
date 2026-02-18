@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <title>{{ część.nazwa }}</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+{% extends "home/layout.html" %}
+{% load static %}
 
+{% block title %}
+    {{ część.nazwa }}
+{% endblock %}
+
+{% block content %} 
         <h1>{{ część.nazwa }}</h1>
         <h3>{{ część.opis }}</h3>
         {% if część.zdjęcie %}
@@ -18,3 +17,4 @@
         <a href="{% url 'pokaz_elektroniki:index' %}">link do powrotu</a>
     </body>
 </html>
+{% endblock content %}
