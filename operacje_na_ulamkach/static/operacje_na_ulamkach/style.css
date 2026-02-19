@@ -25,6 +25,12 @@ input{
     float: left;
 }
 
+#odejmuj{
+    width: 400px;
+    border-radius: 10px;
+    float: left;    
+}
+
 #sk{
     background-color: aliceblue;
     width: 665px;

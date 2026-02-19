@@ -44,10 +44,10 @@ function dodajUlamek(){
 }
 
 function odejmijUlamek(){
-    let l1 = Number(document.getElementById('l2').value);
-    let m1 = Number(document.getElementById('m2').value);
-    let l2 = Number(document.getElementById('l3').value);
-    let m2 = Number(document.getElementById('m3').value);
+    let l1 = Number(document.getElementById('l4').value);
+    let m1 = Number(document.getElementById('m4').value);
+    let l2 = Number(document.getElementById('l5').value);
+    let m2 = Number(document.getElementById('m5').value);
 
     if (m1 === 0 || m2 === 0) {
         alert("Mianownik nie może być zerem");
@@ -57,6 +57,6 @@ function odejmijUlamek(){
     let licznik = l1 * m2 - l2 * m1;
     let mianownik = m1 * m2;
 
-    document.getElementById('lw').value = licznik;
-    document.getElementById('mw').value = mianownik;
+    document.getElementById('lw1').value = licznik;
+    document.getElementById('mw1').value = mianownik;
 }
