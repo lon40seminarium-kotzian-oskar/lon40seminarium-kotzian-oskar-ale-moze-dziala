@@ -1,0 +1,27 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Operacje na ulamkach
+{% endblock %}
+
+{% block content %} 
+    <script src="{% static 'operacje_na_ulamkach/script.js' %}" ></script>
+    <link rel="stylesheet" href="{% static 'operacje_na_ulamkach/style.css' %}">
+    <div id="container">
+        <h1>Operacje na ułamkach</h1>
+        <div id="sk">
+            <fieldset id="skracaj">
+                <legend>Skracanie</legend>
+                <input type="text" id="l1"/>
+                <hr></hr>
+                <input type="text" id="m1"/>
+                <input type="button" value="Skróć" onclick="skracjUlamek()"/>
+                <p id="ulsk">Ułamek skrócony ma wartość</p>
+                <input type="text" id="l1s"/>
+                <hr></hr>
+                <input type="text" id="m1s"/>
+            </fieldset>
+        </div>
+    </div>
+{% endblock content %}

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pokaz_elektroniki',
     'home',
     'pola_figur',
+    'operacje_na_ulamkach',
 ]
 
 MIDDLEWARE = [
