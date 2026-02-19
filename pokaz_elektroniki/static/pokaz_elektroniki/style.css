@@ -17,6 +17,10 @@ div.desc {
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .responsive {
   flex: 0 1 200px; /* flex-grow: 0, flex-shrink: 1, flex-basis: 200px */
   max-width: 200px; /* Ensure responsive item itself doesn't exceed 200px */
