@@ -6,6 +6,15 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 3px solid #040caa;
+}
+
+.navbar-spacer {
+  height: 55px;
 }
 
 .topnav a {
@@ -41,7 +50,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: fixed;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
