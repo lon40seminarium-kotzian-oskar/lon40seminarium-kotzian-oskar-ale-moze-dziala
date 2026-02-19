@@ -38,7 +38,7 @@ body {
     display: none;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.25s ease-out;
+    transition: max-height 1s ease-out;
   }
   .topnav a.icon {
     float: right;
