@@ -1,5 +1,4 @@
-*centeruj{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.centeruj {
+    margin-left: auto;
+    margin-right: auto;
 }
