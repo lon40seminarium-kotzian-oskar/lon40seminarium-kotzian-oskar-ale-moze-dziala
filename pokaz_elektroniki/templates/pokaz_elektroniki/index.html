@@ -12,14 +12,14 @@
         {% for część in części_elektroniczne %}
             <div class="responsive">
                 <div class="gallery">
-                        {% if część.zdjęcie %}
-                            <a href="{% url 'pokaz_elektroniki:strona_części_elektronicznej' część.id %}">
-                                <img src="{{ część.zdjęcie.url }}" alt="{{ część.nazwa }}" class="image gallery-img">
-                            </a>
-                        {% else %}
-                            <p>(brak zdjęcia)</p>
-                        {% endif %}
-                        <h4 class="desc">{{ forloop.counter }}. {{ część.nazwa }}</h4>
+                    {% if część.zdjęcie %}
+                        <a href="{% url 'pokaz_elektroniki:strona_części_elektronicznej' część.id %}">
+                            <img src="{{ część.zdjęcie.url }}" alt="{{ część.nazwa }}" class="image gallery-img">
+                        </a>
+                    {% else %}
+                        <p>(brak zdjęcia)</p>
+                    {% endif %}
+                    <h4 class="desc">{{ forloop.counter }}. {{ część.nazwa }}</h4>
                 </div>
             </div>
         {% endfor %}
