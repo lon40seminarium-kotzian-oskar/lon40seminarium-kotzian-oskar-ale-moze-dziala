@@ -24,3 +24,15 @@ function skracjUlamek(){
         document.getElementById('ukls').innerHTML = "Ułamka nie da sie skrócić";
     }
 }
+
+function dodajUlamek(){
+    let l1 = Number(document.getElementById('l2').value);
+    let m1 = Number(document.getElementById('m2').value);
+    let l2 = Number(document.getElementById('l3').value);
+    let m2 = Number(document.getElementById('m3').value);
+
+    if(m1===m2){
+        document.getElementById('lw').innerHTML = l1+l2;
+        document.getElementById('lw').innerHTML = m1;
+    }
+}
