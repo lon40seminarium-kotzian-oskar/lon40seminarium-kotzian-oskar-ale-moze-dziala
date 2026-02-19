@@ -5,18 +5,6 @@
     gap: 10px; /* Space between items */
 }
 
-div.gallery {
-  /* No border */
-}
-
-div.gallery:hover {
-  /* No border */
-}
-
-div.gallery img {
-  /* This style is now managed by .gallery-img */
-}
-
 .gallery-img {
     max-width: 200px; /* Max width for the image itself */
     width: 100%; /* Image takes full width of its container */
@@ -29,7 +17,7 @@ div.desc {
   text-align: center;
 }
 
-* {
+.cos {
   box-sizing: border-box;
 }
 
