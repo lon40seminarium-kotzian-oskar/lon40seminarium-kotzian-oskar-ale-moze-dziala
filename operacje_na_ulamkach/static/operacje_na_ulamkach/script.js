@@ -5,8 +5,8 @@ function nwd1(a,b){
         }else{
             b=b-a;
         }
-        return a;
     }
+    return a;
 }
 
 function skracjUlamek(){
