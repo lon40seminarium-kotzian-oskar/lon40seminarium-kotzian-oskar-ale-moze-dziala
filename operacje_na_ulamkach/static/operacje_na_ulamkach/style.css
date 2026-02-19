@@ -5,12 +5,12 @@ h1{
 }
 
 hr{
-    width: 50px;
+    width: 60px;
     margin-left: 1px;
 }
 
 input{
-    width: 50px;
+    width: 60px;
 }
 
 #skracaj{
@@ -31,7 +31,7 @@ input{
     float: left;
 }
 #odd{
-    padding-top: 50px;
+    margin-top: 20px;
 }
 
 #sk{
