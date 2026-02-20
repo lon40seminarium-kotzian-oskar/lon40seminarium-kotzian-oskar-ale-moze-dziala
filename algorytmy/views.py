@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from . import Algorytm 
+from algorytmy.models import Algorytm
 
 def index(request):
-    algorytmy =  Algorytm.objects.all()
+    algorytmy =  algorytm.objects.all()
 
     return render(request, 'algorytm/index.html', {'algorytmy': algorytmy, 'active' : 'algorytmy'})
 
