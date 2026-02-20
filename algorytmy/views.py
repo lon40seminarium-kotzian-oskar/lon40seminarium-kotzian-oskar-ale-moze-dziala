@@ -4,7 +4,7 @@ from algorytmy.models import Algorytm
 def index(request):
     algorytmy =  Algorytm.objects.all()
 
-    return render(request, 'algorytm/index.html', {'algorytmy': algorytmy, 'active' : 'algorytmy'})
+    return render(request, 'algorytmy/index.html', {'algorytmy': algorytmy, 'active' : 'algorytmy'})
 
 
 def strona_algorytmu(request, id):
