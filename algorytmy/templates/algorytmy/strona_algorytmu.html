@@ -5,13 +5,17 @@
     {{ algorytm.nazwa }}
 {% endblock %}
 
-{% block content %} 
+{% block content %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
     <script>{{ algorytm.program_java_script|safe }}</script>
     
     <h1>{{ algorytm.nazwa }}</h1>
     <h3>{{ algorytm.opis }}</h3>
     <h3>Program napisany w java script</h3>
-    <pre><code>{{ algorytm.program_java_script }}</code></pre>
+    <pre class="line-numbers"><code class="language-js">{{ algorytm.program_java_script }}</code></pre>
     {% if algorytm.program_python %}
         <h3>Program napisany w pythonie</h3>
         <h4>{{ algorytm.program_python }}</h4>
