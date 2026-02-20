@@ -11,7 +11,7 @@
     <h1>{{ algorytm.nazwa }}</h1>
     <h3>{{ algorytm.opis }}</h3>
     <h3>Program napisany w java script</h3>
-    <h4>{{ algorytm.program_java_script }}</h4>
+    <pre><code>{{ algorytm.program_java_script }}</code></pre>
     {% if algorytm.program_python %}
         <h3>Program napisany w pythonie</h3>
         <h4>{{ algorytm.program_python }}</h4>
