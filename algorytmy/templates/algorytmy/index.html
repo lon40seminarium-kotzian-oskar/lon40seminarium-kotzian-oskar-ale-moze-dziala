@@ -1,0 +1,12 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Algorytm
+{% endblock %}
+
+{% block content %} 
+    {% for algorytm in algorytmy %}
+        <a href=" {% url 'algorytmy:strona_algorytmu' algorytm.id %}" >{{ algorytm.nazwa }}</a>
+    {% endfor %}
+{% endblock content %}

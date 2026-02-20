@@ -1,0 +1,90 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block title %}
+    {{ algorytm.nazwa }}
+{% endblock %}
+
+{% block content %} 
+    <script>{{ algorytm.program_java_script|safe }}</script>
+    
+    <h1>{{ algorytm.nazwa }}</h1>
+    <h3>{{ algorytm.opis }}</h3>
+    <h3>Program napisany w java script</h3>
+    <h4>{{ algorytm.program_java_script }}</h4>
+    {% if algorytm.program_python %}
+        <h3>Program napisany w pythonie</h3>
+        <h4>{{ algorytm.program_python }}</h4>
+    {% endif %}
+    {% if algorytm.program_cpp %}
+        <h3>Program napisany w c++</h3>
+        <h4>{{ algorytm.program_cpp }}</h4>
+    {% endif %}
+    <fieldset>
+        {% if algorytm.typ_wejscia == "1input" %}
+            <input type="number" id="input1" placeholder="input 1">
+        {% elif algorytm.typ_wejscia == "2inputy" %}
+            <input type="number" id="input1" placeholder="input 1">
+            <input type="number" id="input2" placeholder="input 2">
+        {% elif algorytm.typ_wejscia == "3inputy" %}
+            <input type="number" id="input1" placeholder="input 1">
+            <input type="number" id="input2" placeholder="input 2">
+            <input type="number" id="input3" placeholder="input 3">
+        {% elif algorytm.typ_wejscia == "4inputy" %}
+            <input type="number" id="input1" placeholder="input 1">
+            <input type="number" id="input2" placeholder="input 2">
+            <input type="number" id="input3" placeholder="input 3">
+            <input type="number" id="input4" placeholder="input 4">
+        {% elif algorytm.typ_wejscia == "tablica1d" %}
+            <script>
+                const input_ile_p = document.getElementById("ile_p");
+                input_ile_p.addEventListener("input", () => {
+                    const value = input_ile_p.value;
+                    const formContainer = document.getElementById(`1d`);
+                    formContainer.innerHTML = "";
+                    for (let t = 1; t <= value; t++) {
+                        formContainer.innerHTML += `
+                            <input id="input${t}" type="number" placeholder="pos ${t-1}">
+                        `;
+                    }
+                });
+            </script>
+            <label for="ile_p">Ile pozycji :</label>
+            <input id="ile_p" placeholder="eg. 67" type="number" min="1" step="1">
+            <div id="1d"></div>
+            {% elif algorytm.typ_wejscia == "tablica2d" %}
+            <script>
+                const input_ile_c = document.getElementById("ile_c");
+                const input_ile_p1 = document.getElementById("ile_p");
+                function update() {
+                    const valuep = Number(input_ile_p1.value);
+                    const valuec = Number(input_ile_c.value);
+                    if (valuep < 1 || valuec < 1) {
+                        document.getElementById("here").innerHTML = "";
+                        return;
+                    }
+                    const formContainer = document.getElementById("here");
+                    formContainer.innerHTML = "";
+                    for (let i = 1; i <= valuec; i++) {
+                        formContainer.innerHTML += `<div id="r${i}"></div>`;
+                        const row = document.getElementById(`r${i}`);
+                        for (let t = 1; t <= valuep; t++) {
+                            row.innerHTML += `
+                                <input id="input_${i}_${t}" type="number" placeholder="[${i-1}][${t-1}]">
+                            `;
+                        }
+                    }
+                }
+                input_ile_c.addEventListener("input", update);
+                input_ile_p1.addEventListener("input", update);
+            </script>
+            <label for="ile_c">Ile rzędów :</label>
+            <input id="ile_c" placeholder="np. 67" type="number" min="1" step="1">
+            <label for="ile_p">Ile pozycji :</label>
+            <input id="ile_p" placeholder="np. 67" type="number" min="1" step="1">
+            <div id="here"></div>
+        {% endif %}
+        <input type="button" id="submit" onclick="calculate()">
+    </fieldset>
+
+{% endblock content %}

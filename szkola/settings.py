@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'pola_figur',
     'operacje_na_ulamkach',
+    'algorytmy',
 ]
 
 MIDDLEWARE = [

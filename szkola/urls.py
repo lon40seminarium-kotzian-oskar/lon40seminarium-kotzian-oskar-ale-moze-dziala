@@ -25,6 +25,7 @@ urlpatterns = [
     path('elektronika/', include('pokaz_elektroniki.urls', namespace='pokaz_elektroniki')),
     path('pola_figur/', include('pola_figur.urls', namespace='pola_figur')),
     path('operacje_na_ulamkach/', include('operacje_na_ulamkach.urls', namespace='operacje_na_ulamkach')),
+    path('algorytmy/', include('algorytmy.urls', namespace='algorytmy')),
 ]
 
 if settings.DEBUG:
