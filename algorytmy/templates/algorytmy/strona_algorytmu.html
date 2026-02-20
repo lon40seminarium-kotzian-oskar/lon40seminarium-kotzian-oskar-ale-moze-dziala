@@ -14,16 +14,6 @@
     
     <h1>{{ algorytm.nazwa }}</h1>
     <h3>{{ algorytm.opis }}</h3>
-    <h3>Program napisany w java script</h3>
-    <pre class="line-numbers"><code class="language-js">{{ algorytm.program_java_script }}</code></pre>
-    {% if algorytm.program_python %}
-        <h3>Program napisany w pythonie</h3>
-        <h4>{{ algorytm.program_python }}</h4>
-    {% endif %}
-    {% if algorytm.program_cpp %}
-        <h3>Program napisany w c++</h3>
-        <h4>{{ algorytm.program_cpp }}</h4>
-    {% endif %}
     <fieldset>
         {% if algorytm.typ_wejscia == "1input" %}
             <input type="number" id="input1" placeholder="input 1">
@@ -91,5 +81,14 @@
         <input type="button" id="submit" onclick="calculate()" value="Oblicz">
         <div id="answers"></div>
     </fieldset>
-
+    <h3>Program napisany w java script</h3>
+    <pre class="line-numbers"><code class="language-js">{{ algorytm.program_java_script }}</code></pre>
+    {% if algorytm.program_python %}
+        <h3>Program napisany w pythonie</h3>
+        <pre class="line-numbers"><code class="language-js">{{ algorytm.program_python }}</code></pre>
+    {% endif %}
+    {% if algorytm.program_cpp %}
+        <h3>Program napisany w c++</h3>
+        <pre class="line-numbers"><code class="language-js">{{ algorytm.program_cpp }}</code></pre>
+    {% endif %}
 {% endblock content %}
