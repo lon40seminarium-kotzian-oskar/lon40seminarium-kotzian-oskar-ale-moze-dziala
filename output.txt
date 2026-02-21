@@ -1,5 +1,0 @@
-I have completed the requested changes:
-- All modifications to Python files have been reverted.
-- The `home/context_processors.py` file has been deleted.
-- The `home/templates/home/layout.html` file has been updated to include the dropdown menu for "Algorytmy", with the "Algorytmy" button now being a link (`<a>` tag) and placeholder links inside the dropdown.
-- The `home/static/home/style.css` file has been updated with the refined dropdown CSS, ensuring color consistency with the rest of your project and correctly styling the dropdown for an `<a>` tag.
