@@ -42,7 +42,6 @@ input{
     margin-right: auto;
     border-radius: 10px;
     color: black;
-    overflow-x: auto;
 }
 
 #sk p, #sk legend, #sk input {
