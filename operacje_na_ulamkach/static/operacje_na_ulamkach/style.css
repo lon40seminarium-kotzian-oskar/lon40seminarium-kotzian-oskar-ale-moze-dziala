@@ -36,23 +36,13 @@ input{
 
 #sk{
     background-color: aliceblue;
-    border-radius: 10px;
-    padding: 10px;
-    color: black;
-    
-    /* Center the container and make it scrollable */
+    width: 665px;
+    height: 230px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    color: black;
     overflow-x: auto;
-
-    /* Ensure it doesn't break the page layout */
-    max-width: 100%;
-    box-sizing: border-box; /* Important for max-width to include padding */
-}
-
-.sk-inner {
-    width: 665px; /* Maintain the original fixed layout width */
-    height: 230px;
 }
 
 #sk p, #sk legend, #sk input {

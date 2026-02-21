@@ -11,76 +11,74 @@
     <div id="container">
         <h1>Operacje na ułamkach</h1>
         <div id="sk">
-            <div class="sk-inner">
-                <fieldset id="skracaj">
-                    <legend>Skracanie</legend>
-                    <input type="text" id="l1"/>
-                    <hr></hr>
-                    <input type="text" id="m1"/>
-                    <input type="button" value="Skróć" onclick="skracjUlamek()"/>
-                    <p id="ulsk">Ułamek skrócony ma wartość</p>
-                    <input type="text" id="l1s"/>
-                    <hr></hr>
-                    <input type="text" id="m1s"/>
-                </fieldset>
-                <div id="dod">
-                    <fieldset id="dodaj">
-                        <legend>Dodawanie</legend>
-                        <div class="md">
-                            <input type="text" id="l2"/>
-                            <hr></hr>
-                            <input type="text" id="m2"/>
-                            <br>
-                        </div>
-                        <div class="md">
-                            <p>+</p>
-                        </div>
-                        <div class="md">
-                            <input type="text" id="l3">
-                            <hr></hr>
-                            <input type="text" id="m3">
-                        </div>
-                        <div class="md">
-                            <p>=</p>
-                        </div>
-                        <div class="md">
-                            <input type="text" id="lw"/>
-                            <hr></hr>
-                            <input type="text" id="mw"/>
-                        </div>
+            <fieldset id="skracaj">
+                <legend>Skracanie</legend>
+                <input type="text" id="l1"/>
+                <hr></hr>
+                <input type="text" id="m1"/>
+                <input type="button" value="Skróć" onclick="skracjUlamek()"/>
+                <p id="ulsk">Ułamek skrócony ma wartość</p>
+                <input type="text" id="l1s"/>
+                <hr></hr>
+                <input type="text" id="m1s"/>
+            </fieldset>
+            <div id="dod">
+                <fieldset id="dodaj">
+                    <legend>Dodawanie</legend>
+                    <div class="md">
+                        <input type="text" id="l2"/>
+                        <hr></hr>
+                        <input type="text" id="m2"/>
                         <br>
-                        <input type="button" value="Dodaj" onclick="dodajUlamek()"/>
-                    </fieldset>
-                </div>
-                <div id="odd">
-                    <fieldset id="odejmuj">
-                        <legend>Dodawanie</legend>
-                        <div class="md">
-                            <input type="text" id="l4"/>
-                            <hr></hr>
-                            <input type="text" id="m4"/>
-                            <br>
-                        </div>
-                        <div class="md">
-                            <p>-</p>
-                        </div>
-                        <div class="md">
-                            <input type="text" id="l5">
-                            <hr></hr>
-                            <input type="text" id="m5">
-                        </div>
-                        <div class="md">
-                            <p>=</p>
-                        </div>
-                        <div class="md">
-                            <input type="text" id="lw1"/>
-                            <hr></hr>
-                            <input type="text" id="mw1"/>
-                        </div>
-                        <br><br><br>
-                        <input type="button" value="Odejmij" onclick="odejmijUlamek()"/>
-                    </fieldset>
-                </div>
+                    </div>
+                    <div class="md">
+                        <p>+</p>
+                    </div>
+                    <div class="md">
+                        <input type="text" id="l3">
+                        <hr></hr>
+                        <input type="text" id="m3">
+                    </div>
+                    <div class="md">
+                        <p>=</p>
+                    </div>
+                    <div class="md">
+                        <input type="text" id="lw"/>
+                        <hr></hr>
+                        <input type="text" id="mw"/>
+                    </div>
+                    <br>
+                    <input type="button" value="Dodaj" onclick="dodajUlamek()"/>
+                </fieldset>
+            </div>
+            <div id="odd">
+                <fieldset id="odejmuj">
+                    <legend>Dodawanie</legend>
+                    <div class="md">
+                        <input type="text" id="l4"/>
+                        <hr></hr>
+                        <input type="text" id="m4"/>
+                        <br>
+                    </div>
+                    <div class="md">
+                        <p>-</p>
+                    </div>
+                    <div class="md">
+                        <input type="text" id="l5">
+                        <hr></hr>
+                        <input type="text" id="m5">
+                    </div>
+                    <div class="md">
+                        <p>=</p>
+                    </div>
+                    <div class="md">
+                        <input type="text" id="lw1"/>
+                        <hr></hr>
+                        <input type="text" id="mw1"/>
+                    </div>
+                    <br><br><br>
+                    <input type="button" value="Odejmij" onclick="odejmijUlamek()"/>
+                </fieldset>
             </div>
         </div>
     </div>
