@@ -15,9 +15,8 @@
             <a href="{% url 'pokaz_elektroniki:index' %}" {% if active == 'pokaz_elektroniki' %}class="active"{% endif %}>Elektronika</a>
             <a href="{% url 'pola_figur:index' %}" {% if active == 'pola_figur' %}class="active"{% endif %}>Pola figur</a>
             <a href="{% url 'operacje_na_ulamkach:index' %}" {% if active == 'operacje_na_ulamkach' %}class="active"{% endif %}>Operacje na ulamkach</a>
-            <a href="{% url 'algorytmy:index' %}" {% if active == 'algorytmy' %}class="active"{% endif %}>Algorytmy</a>
             <div class="dropdown">
-                <a class="dropbtn">Algorytmy
+                <a class="dropbtn" href="{% url 'algorytmy:index' %}" {% if active == 'algorytmy' %}class="active"{% endif %}>Algorytmy
                     <i class="fa fa-caret-down"></i>
                 </a>
                 <div class="dropdown-content">
