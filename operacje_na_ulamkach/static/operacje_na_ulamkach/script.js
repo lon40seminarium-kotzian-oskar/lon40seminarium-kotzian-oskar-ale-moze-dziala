@@ -1,10 +1,10 @@
 function nwd1(a,b){
-    while(a!=b){
-        if(a>b){
-            a = a - b;
-        }else{
-            b=b-a;
-        }
+    a = Math.abs(a);
+    b = Math.abs(b);
+    while(b) {
+        let t = b;
+        b = a % b;
+        a = t;
     }
     return a;
 }
@@ -38,8 +38,21 @@ function dodajUlamek(){
 
     let licznik = l1 * m2 + l2 * m1;
     let mianownik = m1 * m2;
+    
+    let nwd = nwd1(licznik, mianownik);
+    licznik /= nwd;
+    mianownik /= nwd;
 
-    document.getElementById('lw').value = licznik;
+    let calkowita = Math.trunc(licznik / mianownik);
+    let resztaLicznik = Math.abs(licznik % mianownik);
+
+    if (mianownik < 0) {
+        mianownik = Math.abs(mianownik);
+        resztaLicznik = -resztaLicznik;
+    }
+
+    document.getElementById('cw').value = calkowita;
+    document.getElementById('lw').value = resztaLicznik;
     document.getElementById('mw').value = mianownik;
 }
 
@@ -57,6 +70,19 @@ function odejmijUlamek(){
     let licznik = l1 * m2 - l2 * m1;
     let mianownik = m1 * m2;
 
-    document.getElementById('lw1').value = licznik;
+    let nwd = nwd1(licznik, mianownik);
+    licznik /= nwd;
+    mianownik /= nwd;
+
+    let calkowita = Math.trunc(licznik / mianownik);
+    let resztaLicznik = Math.abs(licznik % mianownik);
+    
+    if (mianownik < 0) {
+        mianownik = Math.abs(mianownik);
+        resztaLicznik = -resztaLicznik;
+    }
+
+    document.getElementById('cw1').value = calkowita;
+    document.getElementById('lw1').value = resztaLicznik;
     document.getElementById('mw1').value = mianownik;
 }
