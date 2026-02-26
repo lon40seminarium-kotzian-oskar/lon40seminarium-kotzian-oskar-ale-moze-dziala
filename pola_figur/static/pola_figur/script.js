@@ -47,8 +47,10 @@ function trapeziumArea(){
 
     let area = ((a + b) * h) / 2;
 
+    let perimeter = a+b+(2*((((a-b)/2)**2+h**2)**(1/2)));
+
     document.getElementById("trpAResult").innerHTML =
-    `Pole: ${area}`;
+    `Pole: ${area} <br> Obwód dla trapezu równorammienny : ${perimeter}`;
 }
 
 function trapeziumDiameter(){
