@@ -3,14 +3,14 @@ function showMenu1(){
 }
 
 function readValue1() {
-    var a = document.getElementById('value1').value;
+    var a = Number(document.getElementById('value1').value);
     var belt = document.getElementById('belt1');
 
-    if (a == 0) {
+    if (a === 0) {
         belt.style.backgroundColor = 'black';
-    } else if (a == 1) {
+    } else if (a === 1) {
         belt.style.backgroundColor = 'brown';
-    } else if (a == 2) {
+    } else if (a === 2) {
         belt.style.backgroundColor = 'red';
     }
 }
