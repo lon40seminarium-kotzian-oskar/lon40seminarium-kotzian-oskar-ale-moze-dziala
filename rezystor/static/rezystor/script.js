@@ -13,8 +13,8 @@ const colors = {
     srebny: { color: "silver", mnoznik: 0.01, cyfra: null, tolerancja: 10 }
 };
 
-function showMenu1(){
-    document.getElementById('value1').style.display = 'block';
+function showMenu(which){
+    document.getElementById(`value${which}`).style.display = 'block';
 }
 
 function readValue1() {

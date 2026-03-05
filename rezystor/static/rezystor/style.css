@@ -53,6 +53,14 @@
 #belt4{
     width: 10px;
     height: 100%;
+    background-color: brown;
+    margin-left: 20px;
+    z-index: 3;
+}
+
+#belt5{
+    width: 10px;
+    height: 100%;
     background-color: gold;
     margin-left: 75px;
     z-index: 3;
