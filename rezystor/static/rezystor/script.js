@@ -17,7 +17,7 @@ function showMenu(which){
     document.getElementById(`value${which}`).style.display = 'block';
 }
 
-function readValue1(which) {
+function readValue(which) {
     var a = document.getElementById(`value${which}`).value;
     var belt = document.getElementById(`belt${which}`);
 
