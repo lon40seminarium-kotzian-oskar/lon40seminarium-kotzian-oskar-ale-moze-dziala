@@ -15,11 +15,16 @@
         <div id="resistor">
             <div id="res-wire"></div>
             <div id="res-body">
-                <div id="belt1"></div>
+                <div id="belt1" onclick="showMenu1()"></div>
                 <div id="belt2"></div>
                 <div id="belt3"></div>
                 <div id="belt4"></div>
             </div>
         </div>
     </div>
+    <select id="value1" onchange="readValue1()" style="display: none;">
+        <option value="1">Czarny</option>
+        <option value="2">Brązowy</option>
+        <option value="3">Czerwony</option>
+    </select>
 {% endblock content %}
