@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'pola_figur',
     'operacje_na_ulamkach',
     'algorytmy',
+    'rezystor',
 ]
 
 MIDDLEWARE = [

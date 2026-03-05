@@ -1,0 +1,25 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Rezystor
+{% endblock %}
+
+{% block content %} 
+    
+    <script src="{% static 'rezystor/script.js' %}" ></script>
+    <link rel="stylesheet" href="{% static 'rezystor/style.css' %}">
+
+    <div id="container">
+        <h1>Kalkulator kodów rezystorów</h1>
+        <div id="resistor">
+            <div id="res-wire"></div>
+            <div id="res-body">
+                <div id="belt1"></div>
+                <div id="belt2"></div>
+                <div id="belt3"></div>
+                <div id="belt4"></div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
