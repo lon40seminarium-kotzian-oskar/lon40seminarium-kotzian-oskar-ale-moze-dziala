@@ -4,7 +4,7 @@ function showMenu1(){
 
 function readValue1(){
     var a = document.getElementById('value1').value;
-    var bg = document.getElementById('belt1').style.background-color;
+    var bg = document.getElementById('belt1').style['background-color'];
     if(a == 0){
         bg = 'black';
     } else if (a == 1){
