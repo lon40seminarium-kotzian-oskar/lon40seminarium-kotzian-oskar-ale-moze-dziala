@@ -1,5 +1,5 @@
 function showMenu1(){
-    document.getElementById('value').style.display = 'block';
+    document.getElementById('value1').style.display = 'block';
 }
 
 function readValue1(){
@@ -8,8 +8,8 @@ function readValue1(){
     if(a == 0){
         bg = 'black';
     } else if (a == 1){
-        bg = 'brown'
+        bg = 'brown';
     } else if (a == 2){
-        bg = 'red'
+        bg = 'red';
     }
 }
