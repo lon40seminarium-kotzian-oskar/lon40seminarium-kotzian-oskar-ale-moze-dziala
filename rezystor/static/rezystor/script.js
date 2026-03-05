@@ -17,9 +17,9 @@ function showMenu(which){
     document.getElementById(`value${which}`).style.display = 'block';
 }
 
-function readValue1() {
-    var a = document.getElementById('value1').value;
-    var belt = document.getElementById('belt1');
+function readValue1(which) {
+    var a = document.getElementById(`value${which}`).value;
+    var belt = document.getElementById(`belt${which}`);
 
     belt.style.backgroundColor = colors[a].color;
 }
