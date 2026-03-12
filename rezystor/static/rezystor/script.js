@@ -32,19 +32,42 @@ function findKeyByColor(color) {
     }
 }
 
+function rgbToName(rgb) {
+    const map = {
+        "rgb(0, 0, 0)": "black",
+        "rgb(165, 42, 42)": "brown",
+        "rgb(255, 0, 0)": "red",
+        "rgb(255, 165, 0)": "orange",
+        "rgb(255, 255, 0)": "yellow",
+        "rgb(0, 128, 0)": "green",
+        "rgb(0, 0, 255)": "blue",
+        "rgb(238, 130, 238)": "violet",
+        "rgb(128, 128, 128)": "grey",
+        "rgb(255, 255, 255)": "white",
+        "rgb(255, 215, 0)": "gold",
+        "rgb(192, 192, 192)": "silver"
+    };
+    return map[rgb] || null;
+}
+
 function calculate(){
-    var colory = [document.getElementById('belt1').style.backgroundColor,
-        document.getElementById('belt2').style.backgroundColor,
-        document.getElementById('belt3').style.backgroundColor,
-        document.getElementById('belt4').style.backgroundColor,
-        document.getElementById('belt5').style.backgroundColor
+    var colory = [
+        getComputedStyle(document.getElementById('belt1')).backgroundColor,
+        getComputedStyle(document.getElementById('belt2')).backgroundColor,
+        getComputedStyle(document.getElementById('belt3')).backgroundColor,
+        getComputedStyle(document.getElementById('belt4')).backgroundColor,
+        getComputedStyle(document.getElementById('belt5')).backgroundColor
     ];
 
     for (let i in colory) {
-        colory[i] = findKeyByColor(colory[i]);
+        const name = rgbToName(colory[i]);
+        colory[i] = findKeyByColor(name);
     }
 
-    var wynik = Number(colors[colory[0]].cyfra) * 100 + Number(colors[colory[1]].cyfra) * 10 + Number(colors[colory[2]].cyfra) * Number(colors[colory[3]].mnoznik)   
-
+    var wynik = Number(colors[colory[0]].cyfra) * 100 +
+            Number(colors[colory[1]].cyfra) * 10 +
+            Number(colors[colory[2]].cyfra) *
+            Number(colors[colory[3]].mnoznik);
+            
     document.getElementById('wynik').innerHTML = `Wynik to ${wynik}om`;
 }
