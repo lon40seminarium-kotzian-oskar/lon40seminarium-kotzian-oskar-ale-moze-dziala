@@ -50,6 +50,21 @@ function rgbToName(rgb) {
     return map[rgb] || null;
 }
 
+function formatOhms(value) {
+    if (value >= 1_000_000_000) {
+        return (value / 1_000_000_000) + "GΩ";
+    } 
+    else if (value >= 1_000_000) {
+        return (value / 1_000_000) + "MΩ";
+    } 
+    else if (value >= 1_000) {
+        return (value / 1_000) + "kΩ";
+    } 
+    else {
+        return value + "Ω";
+    }
+}
+
 function calculate(){
     var colory = [
         getComputedStyle(document.getElementById('belt1')).backgroundColor,
@@ -68,6 +83,10 @@ function calculate(){
             Number(colors[colory[1]].cyfra) * 10 +
             Number(colors[colory[2]].cyfra)) *
             Number(colors[colory[3]].mnoznik);
-
-    document.getElementById('wynik').innerHTML = `Wynik to ${wynik}om`;
+    document.getElementById('wynik').innerHTML = `Wynik to ${formatOhms(wynik)}`;
+    
+    var bot_num = wynik - wynik*Number(colors[colory[4]].tolerancja);
+    var top_num = wynik - wynik*Number(colors[colory[4]].tolerancja);
+    
+    document.getElementById('wynik').innerHTML += `tolerancjia jest od ${bot_num} do ${top_num}` 
 }
