@@ -86,7 +86,7 @@ function calculate(){
     document.getElementById('wynik').innerHTML = `Wynik to ${formatOhms(wynik)}`;
     
     var bot_num = wynik - wynik*Number(colors[colory[4]].tolerancja);
-    var top_num = wynik - wynik*Number(colors[colory[4]].tolerancja);
+    var top_num = wynik + wynik*Number(colors[colory[4]].tolerancja);
     
     document.getElementById('wynik').innerHTML += `tolerancjia jest od ${bot_num} do ${top_num}` 
 }
