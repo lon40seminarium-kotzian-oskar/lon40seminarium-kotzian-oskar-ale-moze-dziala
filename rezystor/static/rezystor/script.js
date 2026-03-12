@@ -64,10 +64,10 @@ function calculate(){
         colory[i] = findKeyByColor(name);
     }
 
-    var wynik = Number(colors[colory[0]].cyfra) * 100 +
+    var wynik = (Number(colors[colory[0]].cyfra) * 100 +
             Number(colors[colory[1]].cyfra) * 10 +
-            Number(colors[colory[2]].cyfra) *
+            Number(colors[colory[2]].cyfra)) *
             Number(colors[colory[3]].mnoznik);
-            
+
     document.getElementById('wynik').innerHTML = `Wynik to ${wynik}om`;
 }
