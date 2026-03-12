@@ -88,5 +88,5 @@ function calculate(){
     var bot_num = wynik - wynik*Number(colors[colory[4]].tolerancja);
     var top_num = wynik + wynik*Number(colors[colory[4]].tolerancja);
     
-    document.getElementById('wynik').innerHTML += `tolerancjia jest od ${formatOhms(bot_num)} do ${formatOhms(top_num)}` 
+    document.getElementById('wynik').innerHTML += ` tolerancjia jest od ${formatOhms(bot_num)} do ${formatOhms(top_num)}` 
 }
