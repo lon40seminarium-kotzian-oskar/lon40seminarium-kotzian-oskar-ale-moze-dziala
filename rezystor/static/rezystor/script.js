@@ -23,3 +23,28 @@ function readValue(which) {
 
     belt.style.backgroundColor = colors[a].color;
 }
+
+function findKeyByColor(color) {
+    for (const key in colors) {
+        if (colors[key].color === color) {
+            return key;
+        }
+    }
+}
+
+function calculate(){
+    var colory = [document.getElementById('belt1').style.backgroundColor,
+        document.getElementById('belt2').style.backgroundColor,
+        document.getElementById('belt3').style.backgroundColor,
+        document.getElementById('belt4').style.backgroundColor,
+        document.getElementById('belt5').style.backgroundColor
+    ];
+
+    for (let i in colory) {
+        colory[i] = findKeyByColor(colory[i]);
+    }
+
+    var wynik = Number(colors[colory[0]].cyfra) * 100 + Number(colors[colory[1]].cyfra) * 10 + Number(colors[colory[2]].cyfra) * Number(colors[colory[3]].mnoznik)   
+
+    document.getElementById('wynik').innerHTML = `Wynik to ${wynik}om`;
+}
