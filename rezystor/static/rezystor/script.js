@@ -90,3 +90,27 @@ function calculate(){
     
     document.getElementById('wynik').innerHTML += ` tolerancjia jest od ${formatOhms(bot_num)} do ${formatOhms(top_num)}` 
 }
+
+function calculate1(){
+    var colory = [
+        getComputedStyle(document.getElementById('belt6')).backgroundColor,
+        getComputedStyle(document.getElementById('belt7')).backgroundColor,
+        getComputedStyle(document.getElementById('belt8')).backgroundColor,
+        getComputedStyle(document.getElementById('belt9')).backgroundColor
+    ];
+
+    for (let i in colory) {
+        const name = rgbToName(colory[i]);
+        colory[i] = findKeyByColor(name);
+    }
+
+    var wynik = (Number(colors[colory[0]].cyfra) * 10 +
+            Number(colors[colory[1]].cyfra)) *
+            Number(colors[colory[2]].mnoznik);
+    document.getElementById('wynik1').innerHTML = `Wynik to ${formatOhms(wynik)}`;
+    
+    var bot_num = wynik - wynik*Number(colors[colory[3]].tolerancja);
+    var top_num = wynik + wynik*Number(colors[colory[3]].tolerancja);
+    
+    document.getElementById('wynik1').innerHTML += ` tolerancjia jest od ${formatOhms(bot_num)} do ${formatOhms(top_num)}` 
+}

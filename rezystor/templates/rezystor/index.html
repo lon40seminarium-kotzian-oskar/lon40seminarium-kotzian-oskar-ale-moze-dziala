@@ -15,6 +15,68 @@
         <div id="resistor">
             <div id="res-wire"></div>
             <div id="res-body">
+                <div id="belt6" onclick="showMenu(6)"></div>
+                <div id="belt7" onclick="showMenu(7)"></div>
+                <div id="belt8" onclick="showMenu(8)"></div>
+                <div id="belt9" onclick="showMenu(9)"></div>
+            </div>
+        </div>
+    </div>
+    <select id="value6" onchange="readValue(6)" style="display: none;">
+        <option value="" disabled selected>Wybierz kolor</option>
+        <option value="czarny">Czarny</option>
+        <option value="brazowy">Brązowy</option>
+        <option value="czerwony">Czerwony</option>
+        <option value="pomaranczowy">Pomarańczowy</option>
+        <option value="zolty">Żółty</option>
+        <option value="zielony">Zielony</option>
+        <option value="niebieski">Niebieski</option>
+        <option value="fioletowy">Fioletowy</option>
+        <option value="szary">Szary</option>
+        <option value="bialy">Biały</option>
+    </select>
+    <select id="value7" onchange="readValue(7)" style="display: none;">
+        <option value="" disabled selected>Wybierz kolor</option>
+        <option value="czarny">Czarny</option>
+        <option value="brazowy">Brązowy</option>
+        <option value="czerwony">Czerwony</option>
+        <option value="pomaranczowy">Pomarańczowy</option>
+        <option value="zolty">Żółty</option>
+        <option value="zielony">Zielony</option>
+        <option value="niebieski">Niebieski</option>
+        <option value="fioletowy">Fioletowy</option>
+        <option value="szary">Szary</option>
+        <option value="bialy">Biały</option>
+    </select>
+    <select id="value8" onchange="readValue(8)" style="display: none;">
+        <option value="" disabled selected>Wybierz kolor</option>
+        <option value="czarny">Czarny</option>
+        <option value="brazowy">Brązowy</option>
+        <option value="czerwony">Czerwony</option>
+        <option value="pomaranczowy">Pomarańczowy</option>
+        <option value="zolty">Żółty</option>
+        <option value="zielony">Zielony</option>
+        <option value="niebieski">Niebieski</option>
+        <option value="fioletowy">Fioletowy</option>
+        <option value="szary">Szary</option>
+        <option value="zloty">Złoty</option>
+        <option value="srebrny">Srebrny</option>
+    </select>
+    <select id="value9" onchange="readValue(9)" style="display: none;">
+        <option value="" disabled selected>Wybierz kolor</option>
+        <option value="brazowy">Brązowy</option>
+        <option value="czerwony">Czerwony</option>
+        <option value="zloty">Złoty</option>
+        <option value="srebrny">Srebrny</option>
+    </select>
+    <button onclick="calculate1()">Oblicz</button>
+    <div id="wynik1"></div>
+
+    <div id="container">
+        <h1>Kalkulator kodów rezystorów</h1>
+        <div id="resistor">
+            <div id="res-wire"></div>
+            <div id="res-body">
                 <div id="belt1" onclick="showMenu(1)"></div>
                 <div id="belt2" onclick="showMenu(2)"></div>
                 <div id="belt3" onclick="showMenu(3)"></div>
