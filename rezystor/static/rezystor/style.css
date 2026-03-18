@@ -68,3 +68,8 @@
 #belt1:hover, #belt2:hover, #belt3:hover, #belt4:hover, #belt5:hover, #belt6:hover, #belt7:hover, #belt8:hover, #belt9:hover {
     width:15px;
 }
+
+.small-img {
+    width: 200px;     
+    height: auto;     
+}
