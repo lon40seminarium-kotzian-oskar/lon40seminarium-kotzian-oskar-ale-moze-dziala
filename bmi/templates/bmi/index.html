@@ -5,7 +5,11 @@
     Bmi
 {% endblock %}
 
-{% block content %} 
+{% block content %}
+
+    <script src="{% static 'bmi/script.js' %}" ></script>
+    <link rel="stylesheet" href="{% static 'bmi/style.css' %}">
+
     <h1>Kalkulator bmi</h1>
     <h3>Twoja waga</h3>
     <input type="number" id="waga"/>
@@ -16,5 +20,5 @@
     <div id="odpowiedz"></div>
     <img src="{% static 'bmi/images/bmi.png' %}">
     <img src="{% static 'bmi/images/strzalka.png' %}">
-    
+
 {% endblock content %}
