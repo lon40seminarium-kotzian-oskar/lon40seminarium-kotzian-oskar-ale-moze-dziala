@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'operacje_na_ulamkach',
     'algorytmy',
     'rezystor',
+    'bmi',
 ]
 
 MIDDLEWARE = [

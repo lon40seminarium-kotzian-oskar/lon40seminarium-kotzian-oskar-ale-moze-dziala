@@ -27,6 +27,7 @@ urlpatterns = [
     path('operacje_na_ulamkach/', include('operacje_na_ulamkach.urls', namespace='operacje_na_ulamkach')),
     path('algorytmy/', include('algorytmy.urls', namespace='algorytmy')),
     path('rezystor/', include('rezystor.urls', namespace='rezystor')),
+    path('bmi/', include('bmi.urls', namespace='bmi')),
 ]
 
 if settings.DEBUG:
