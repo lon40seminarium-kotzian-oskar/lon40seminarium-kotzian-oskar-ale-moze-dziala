@@ -1,10 +1,12 @@
 .container {
     position: relative;
 }
+
 .image2 {
     position: absolute;
-    left: 318px;
-    top: 195px;
+    left: 128px;
+    top: 190px;
+    scale: 1.52;
     transition: 200ms;
 }
 
