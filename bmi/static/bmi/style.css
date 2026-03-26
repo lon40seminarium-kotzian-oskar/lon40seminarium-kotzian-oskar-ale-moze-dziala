@@ -2,54 +2,14 @@
     position: relative;
 }
 
-.img1{
+#img1{
     scale:70%;
 }
 
 .image2 {
     position: absolute;
-    left: 128px;
+    left: 289px;
     top: 190px;
     scale: 1.064;
     transition: 200ms;
-}
-
-.image2.underweight{
-    position: absolute;
-    left: 275px;
-    top: 235px;
-    rotate: -1530deg;
-    transition: 2000ms;
-}
-
-.image2.normal{
-    position: absolute;
-    left: 290px;
-    top: 210px;
-    rotate: -765deg;
-    transition: 2000ms;
-}
-
-.image2.overweight{
-    position: absolute;
-    left: 318px;
-    top: 195px;
-    rotate: 720deg;
-    transition: 2000ms;
-}
-
-.image2.obese{
-    position: absolute;
-    left: 350px;
-    top: 210px;
-    rotate: 765deg;
-    transition: 2000ms;
-}
-
-.image2.extremeobese{
-    position: absolute;
-    left: 360px;
-    top: 235px;
-    rotate: 1530deg;
-    transition: 2000ms;
 }
