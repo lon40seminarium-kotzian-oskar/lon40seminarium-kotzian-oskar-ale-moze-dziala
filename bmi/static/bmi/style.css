@@ -2,11 +2,15 @@
     position: relative;
 }
 
+.img1{
+    scale:70%;
+}
+
 .image2 {
     position: absolute;
     left: 128px;
     top: 190px;
-    scale: 1.52;
+    scale: 1.064;
     transition: 200ms;
 }
 
