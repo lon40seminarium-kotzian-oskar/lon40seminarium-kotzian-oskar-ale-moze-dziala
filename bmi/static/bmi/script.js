@@ -14,12 +14,20 @@ function oblicz(){
     const wzrost = parseFloat(document.getElementById('wzrost').value)/100;
     const bmi = waga/(wzrost*wzrost);
 
-    for( i in bmiScale){
-        if(bmi > bmiScale[i].min && bmi < bmiScale[i].max){
-            document.getElementById('odpowiedz').innerHTML = `Twoje bmi to ${bmi} i masz ${bmiScale[i].nazwa}`;
-            document.getElementById('image2').style.transform = `scale(1.064) rotate(${bmiScale[i].degmin + ((bmi - bmiScale[i].min) / (bmiScale[i].max - bmiScale[i].min)) * (bmiScale[i].degmax - bmiScale[i].degmin)}deg)`;
-        }else if (bmi > 45){
-            document.getElementById('odpowiedz').innerHTML = `Twoje bmi to ${bmi} i jesteś jebanym gróbasem`;
+    let znalezione = false;
+
+    for (let i in bmiScale){
+        if (bmi >= bmiScale[i].min && bmi <= bmiScale[i].max){
+            document.getElementById('odpowiedz').innerHTML = `Twoje bmi to ${bmi.toFixed(2)} i masz ${bmiScale[i].nazwa}`;
+
+            document.getElementById('image2').style.transform = `scale(1.064) rotate(${ bmiScale[i].degmin + ((bmi - bmiScale[i].min) / (bmiScale[i].max - bmiScale[i].min)) * (bmiScale[i].degmax - bmiScale[i].degmin) }deg)`;
+
+            znalezione = true;
+            break;
         }
+    }
+
+    if (!znalezione && bmi > 45){ 
+        document.getElementById('odpowiedz').innerHTML = `Twoje bmi to ${bmi.toFixed(2)} i jesteś jebanym gróbasem`;
     }
 }
