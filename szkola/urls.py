@@ -28,6 +28,7 @@ urlpatterns = [
     path('algorytmy/', include('algorytmy.urls', namespace='algorytmy')),
     path('rezystor/', include('rezystor.urls', namespace='rezystor')),
     path('bmi/', include('bmi.urls', namespace='bmi')),
+    path('catering/', include('catering.urls', namespace='catering')),
 ]
 
 if settings.DEBUG:

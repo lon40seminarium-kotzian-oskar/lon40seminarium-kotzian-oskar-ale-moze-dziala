@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'algorytmy',
     'rezystor',
     'bmi',
+    'catering',
 ]
 
 MIDDLEWARE = [
