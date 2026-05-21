@@ -16,6 +16,9 @@ h1{
     color: brown;
     text-align: center;
 }
+label {
+    color: #000;
+}
 #dodatek{
     float: left;
 }
