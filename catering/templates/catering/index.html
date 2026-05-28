@@ -37,34 +37,29 @@
             </select><br>
             <fieldset id="f2">
                 <legend>Dodatki</legend>
-            <input type="radio" name="dodatek" value="dod" onclick="pokazDodatek();" checked>
+            <input type="radio" name="dodatek" value="dod"  checked>
             <label for="brak">z dodatkiem</label>
-            <input type="radio" name="dodatek" value="bez-dod" onclick="ukryjDodatek();">
+            <input type="radio" name="dodatek" value="bez-dod" >
             <label for="z-dodatkiem">brak</label>
-            <input type="text" id="dodatek" onkeyup="dodatek();" style="display: block; width: 100px;">
-            <input type="checkbox" id="cdodatek" style="display: block;" disabled><br>
+            <input type="text" id="dodatek" style="display: block; width: 100px;">
             
             </fieldset>
             
 
             
             <label for="ulica">Ulica</label>
-            <input type="text" id="ulica" onkeyup="ulica();">
-            <input type="checkbox" id="culica" disabled><br>
+            <input type="text" id="ulica">
 
             <label for="nr">Nr</label>
-            <input type="text" id="numer" onkeyup="numer();">
-            <input type="checkbox" id="cnumer" disabled><br>
+            <input type="text" id="numer">
 
             <label for="telefon">Telefon</label>
-            <input type="text" id="telefon" onkeyup="telefon();">
-            <input type="checkbox" id="ctelefon" disabled><br>
+            <input type="text" id="telefon">
 
             <label for="waga">Waga</label>
-            <input type="text" id="waga" onkeyup="waga();">
-            <input type="checkbox" id="cwaga" disabled><br>
+            <input type="text" id="waga" >
 
-            <input type="button" value="Wyślij" id="send" onclick="zamow();" disabled>
+            <input type="button" value="Wyślij" id="send" disabled>
             <p id="status">Status zamówienia</p>
             <textarea name="dane" id="dane" rows="2" cols="30"></textarea>
         </fieldset>

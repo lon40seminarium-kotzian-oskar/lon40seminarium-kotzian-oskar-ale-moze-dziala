@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rezystor',
     'bmi',
     'catering',
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
